@@ -15,6 +15,7 @@
     <link 
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,700;1,100;1,500&display=swap" 
     rel="stylesheet">
+    <link rel="stylesheet" href="../static/base.css">
     <title>{% block title %}The News{% endblock title %}</title>
 </head>
 <body>
@@ -36,10 +37,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Politics</a>
+                    <a class="nav-link" href="{% url 'article_list' %}">Articles</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sports</a>
+                    <a class="nav-link" href="{% url 'article_new' %}">+ New</a>
                 </li>
                 {% if user.is_authenticated %}
                     <li class="nav-item">
